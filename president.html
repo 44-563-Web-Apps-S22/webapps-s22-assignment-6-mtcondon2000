@@ -40,6 +40,42 @@ function checkGuess() {
 }
 </script>
 
+<div>
+    <img src="cardinal.jfif" id="myImg" width="100" height="100" onclick="swapImage()">
+</div>
+
+<script>
+    var useImage = 1;
+    function swapImage() {
+        switch(useImage) {
+            case 1:
+              document.getElementById("myImg").src ="nandu.jfif";
+              useImage = 2;
+              break;  
+            case 2:
+              document.getElementById("myImg").src = "nightjar.jfif";
+              useImage = 3;
+              break;
+            case 3:
+              document.getElementById("myImg").src = "cardinal.jfif";
+              useImage = 1;
+              break;
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script> 

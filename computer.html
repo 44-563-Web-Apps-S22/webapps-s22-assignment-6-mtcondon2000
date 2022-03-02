@@ -21,25 +21,51 @@
     <input type="button" onclick="orderComputer()" value="Order a Computer">
 </form>
 
+<form>
+    <label>Enter a property name </label>
+    <input type ="text" id="property" value="engraved"> <br>
+
+    <label>Enter a value </label>
+    <input type ="text" id="value"> <br>
+
+    <input type="button" onclick="updateComputer()" value="Update the computer">
+</form>
 
 <p id="result"></p>
 
 <script> 
-    let my_computer = {};
+    my_computer = {};
     function orderComputer() {
         
-        my_computer = {extra:false,mouse:false,cell:false};
+        my_computer = {};
         if(document.getElementById("extra").checked = true) {
-            my_computer.appendChild(my_computer) = true;
+            my_computer.extra = true;
+        }
+        else {
+            my_computer.extra = false;
         }
         if (document.getElementById("mouse").checked = true) {
-            my_computer[Mouse] = true;
+            my_computer.mouse = true;
+        }
+        else {
+            my_computer.mouse = false;
         }
         if (document.getElementById("cell").checked = true) {
-            my_computer[Cell] = true;
+            my_computer.cell = true;
+        }
+        else {
+            my_computer.cell = true;
         }
         document.getElementById("result").innerHTML = my_computer;
        
+    }
+
+    function updateComputer() {
+        value = document.getElementById("property").value;
+        property = document.getElementById("value").value;
+
+        my_computer.value = value;
+        document.getElementById("result").innerHTML = my_computer;
     }
 </script>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Computer </title>
+    </head>
+ 
+<body>
+
+<h2>Michael Condon orders a computer</h2>
+
+<form>
+    <label>Extra memory</label>
+    <input type ="checkbox" id="checkbox" name="extra"> <br>
+
+    <label>Mouse</label>
+    <input type ="checkbox" id="checkbox" name="mouse"> <br>
+
+    <label>Cell service</label>
+    <input type ="checkbox" id="checkbox" name="cell"> <br>
+
+    <input type="button" onclick="orderComputer()" value="Order a Computer">
+</form>
+
+
+<p id="result"></p>
+
+<script> 
+    let my_computer = {};
+    function orderComputer() {
+        
+        my_computer = {extra:false,mouse:false,cell:false};
+        if(document.getElementById("extra").checked = true) {
+            my_computer.appendChild(my_computer) = true;
+        }
+        if (document.getElementById("mouse").checked = true) {
+            my_computer[Mouse] = true;
+        }
+        if (document.getElementById("cell").checked = true) {
+            my_computer[Cell] = true;
+        }
+        document.getElementById("result").innerHTML = my_computer;
+       
+    }
+</script>
+
+</body>
+</html> 

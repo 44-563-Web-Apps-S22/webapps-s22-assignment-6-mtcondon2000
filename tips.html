@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Tips </title>
+    </head>
+ 
+<body>
+
+<h2>Michael Condon computes tips</h2>
+
+<form>
+    <label>Enter a check amount</label>
+    <input type ="number" id="check" value=20> <br>
+
+    <label>Enter tip increase</label>
+    <input type ="number" id="tip" value=0.05> <br>
+
+    <input type="button" onclick="tips()" value="Find Tips">
+</form>
+
+
+<p id="result"></p>
+
+<script> 
+
+function tips(){
+    var checkValue = document.getElementById("check").value
+    var tipValue = parseFloat(document.getElementById("tip").value)
+    let result = "";
+    let x = 0;
+    var tipvalue_new = 0.1;
+    while(x < 10) {
+       result = result + " " + ((checkValue*tipvalue_new).toPrecision(2));
+       x = x + 1;
+       tipvalue_new = tipvalue_new + tipValue;
+    }
+    document.getElementById("result").innerHTML = "Tip amounts by increase of "+tipValue+" are"+ result;
+}
+</script>
+
+<form>
+    <input type="radio" id="times" value="times" onclick="chooseOp()">
+    <label for="star">*</label>
+
+    <input type="radio" id="divide" value="divide" onclick="chooseOp()">
+    <label for="slash">/</label>
+
+    <input type="radio" id="exponent" value="exponent" onclick="chooseOp()">
+    <label for="dstars">**</label>
+
+</form>
+
+<p id="results"></p>
+
+<script>
+    function chooseOp() {
+       var checkValue = (document.getElementById("check").value)
+       var tipValue = parseFloat(document.getElementById("tip").value)
+
+        if(document.getElementById("times").checked){
+            document.getElementById("results").innerHTML = checkValue*tipValue;
+        } 
+        else if(document.getElementById("divide").checked){
+            document.getElementById("results").innerHTML = checkValue/tipValue;
+        }
+        else if (document.getElementById("exponent").checked) {
+            document.getElementById("results").innerHTML = checkValue**tipValue;
+        }
+    }
+</script>
+
+</body>
+</html> 

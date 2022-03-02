@@ -35,6 +35,14 @@
 
 <script> 
     my_computer = {};
+    function updateComputer() {
+        value = document.getElementById("property").value;
+        property = document.getElementById("value").value;
+
+        my_computer[value] = value;
+        document.getElementById("result").innerHTML = my_computer;
+    }
+
     function orderComputer() {
         
         my_computer = {};
@@ -60,13 +68,6 @@
        
     }
 
-    function updateComputer() {
-        value = document.getElementById("property").value;
-        property = document.getElementById("value").value;
-
-        my_computer.value = value;
-        document.getElementById("result").innerHTML = my_computer;
-    }
 </script>
 
 </body>

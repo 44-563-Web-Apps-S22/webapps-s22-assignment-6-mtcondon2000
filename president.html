@@ -14,7 +14,7 @@
     <label> Guess the president </label>
     <input type ="text" id="Guess"> <br>
 
-    <input type="button" onclick= "checkGuess()"" value="Check the guess">
+    <input type="button" onclick= "checkGuess()" value="Check the guess">
 </form>
 
 
@@ -24,7 +24,7 @@
 <script>
     var correct = 0;
     var wrong = 0;
-
+    var guesses = 0;
 function checkGuess() {
     var pres = document.getElementById('President').value
     var guess = document.getElementById('Guess').value
@@ -33,8 +33,17 @@ function checkGuess() {
         alert("You got it right")
     }
     else {
+
         wrong = wrong + 1;
-        alert("Wrong President")
+        if (wrong < 3) {
+            alert("Wrong President")
+        }   
+        else {
+            gameOver();
+        }
+    }
+    function gameOver() {
+        alert("Sorry, game over.")
     }
     document.getElementById('result').innerHTML = "Correct:" + correct +" " + "Wrong:" + wrong;
 }
@@ -63,15 +72,6 @@ function checkGuess() {
         }
     }
 </script>
-
-
-
-
-
-
-
-
-
 
 
 
